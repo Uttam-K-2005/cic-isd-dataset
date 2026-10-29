@@ -8,6 +8,8 @@ The frontend sends requests to the existing API. Predictions use the saved model
 
 Prerequisites: Python dependencies from the repository requirements files, Node.js 22.12 or newer, and the saved model artifact under `artifacts/models/`.
 
+The CIC-IDS2017 source CSVs and generated `cicids2017_cleaned.csv` are intentionally excluded from Git because of their size. Keep or obtain the source data locally and follow [docs/DATA_PIPELINE.md](docs/DATA_PIPELINE.md) for expected paths and preprocessing. The saved model artifacts are included.
+
 Start the API from the project root:
 
 ```bash

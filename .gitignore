@@ -1,0 +1,16 @@
+# CIC-IDS2017 source and generated data are large; keep them local.
+/MachineLearningCVE/*.csv
+/cicids2017_cleaned.csv
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+.venv/
+
+# Frontend build and local configuration
+/frontend/node_modules/
+/frontend/dist/
+/frontend/.env.local
+
+# Operating system files
+.DS_Store
