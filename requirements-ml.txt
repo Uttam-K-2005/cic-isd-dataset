@@ -1,0 +1,3 @@
+# Optional baseline training dependencies; compatible wheels are available for Python 3.14 / Apple Silicon.
+scikit-learn==1.9.1
+xgboost==3.4.1

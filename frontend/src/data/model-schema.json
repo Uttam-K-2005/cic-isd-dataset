@@ -1,0 +1,644 @@
+{
+  "modelName": "xgboost",
+  "modelVersion": "20261029T152352Z",
+  "labelClasses": [
+    "BENIGN",
+    "Bot",
+    "DDoS",
+    "DoS GoldenEye",
+    "DoS Hulk",
+    "DoS Slowhttptest",
+    "DoS slowloris",
+    "FTP-Patator",
+    "Heartbleed",
+    "Infiltration",
+    "PortScan",
+    "SSH-Patator",
+    "Web Attack � Brute Force",
+    "Web Attack � Sql Injection",
+    "Web Attack � XSS"
+  ],
+  "inputDtype": "float32",
+  "featureCount": 77,
+  "batchLimitDefault": 64,
+  "featureDomainSource": "full local cleaned CSV scan; negative inputs enabled only when observed in source data",
+  "profiledRows": 2520798,
+  "features": [
+    {
+      "name": "Destination Port",
+      "group": "Packet counts and sizes",
+      "dtype": "number",
+      "allowsNegative": false,
+      "minimumObserved": 0.0,
+      "negativeRowsObserved": 0
+    },
+    {
+      "name": "Flow Duration",
+      "group": "Timing and rates",
+      "dtype": "number",
+      "allowsNegative": true,
+      "minimumObserved": -13.0,
+      "negativeRowsObserved": 107
+    },
+    {
+      "name": "Total Fwd Packets",
+      "group": "Packet counts and sizes",
+      "dtype": "number",
+      "allowsNegative": false,
+      "minimumObserved": 1.0,
+      "negativeRowsObserved": 0
+    },
+    {
+      "name": "Total Backward Packets",
+      "group": "Packet counts and sizes",
+      "dtype": "number",
+      "allowsNegative": false,
+      "minimumObserved": 0.0,
+      "negativeRowsObserved": 0
+    },
+    {
+      "name": "Total Length of Fwd Packets",
+      "group": "Packet counts and sizes",
+      "dtype": "number",
+      "allowsNegative": false,
+      "minimumObserved": 0.0,
+      "negativeRowsObserved": 0
+    },
+    {
+      "name": "Total Length of Bwd Packets",
+      "group": "Packet counts and sizes",
+      "dtype": "number",
+      "allowsNegative": false,
+      "minimumObserved": 0.0,
+      "negativeRowsObserved": 0
+    },
+    {
+      "name": "Fwd Packet Length Max",
+      "group": "Packet counts and sizes",
+      "dtype": "number",
+      "allowsNegative": false,
+      "minimumObserved": 0.0,
+      "negativeRowsObserved": 0
+    },
+    {
+      "name": "Fwd Packet Length Min",
+      "group": "Packet counts and sizes",
+      "dtype": "number",
+      "allowsNegative": false,
+      "minimumObserved": 0.0,
+      "negativeRowsObserved": 0
+    },
+    {
+      "name": "Fwd Packet Length Mean",
+      "group": "Packet counts and sizes",
+      "dtype": "number",
+      "allowsNegative": false,
+      "minimumObserved": 0.0,
+      "negativeRowsObserved": 0
+    },
+    {
+      "name": "Fwd Packet Length Std",
+      "group": "Packet counts and sizes",
+      "dtype": "number",
+      "allowsNegative": false,
+      "minimumObserved": 0.0,
+      "negativeRowsObserved": 0
+    },
+    {
+      "name": "Bwd Packet Length Max",
+      "group": "Packet counts and sizes",
+      "dtype": "number",
+      "allowsNegative": false,
+      "minimumObserved": 0.0,
+      "negativeRowsObserved": 0
+    },
+    {
+      "name": "Bwd Packet Length Min",
+      "group": "Packet counts and sizes",
+      "dtype": "number",
+      "allowsNegative": false,
+      "minimumObserved": 0.0,
+      "negativeRowsObserved": 0
+    },
+    {
+      "name": "Bwd Packet Length Mean",
+      "group": "Packet counts and sizes",
+      "dtype": "number",
+      "allowsNegative": false,
+      "minimumObserved": 0.0,
+      "negativeRowsObserved": 0
+    },
+    {
+      "name": "Bwd Packet Length Std",
+      "group": "Packet counts and sizes",
+      "dtype": "number",
+      "allowsNegative": false,
+      "minimumObserved": 0.0,
+      "negativeRowsObserved": 0
+    },
+    {
+      "name": "Flow Bytes/s",
+      "group": "Timing and rates",
+      "dtype": "number",
+      "allowsNegative": true,
+      "minimumObserved": -261000000.0,
+      "negativeRowsObserved": 78
+    },
+    {
+      "name": "Flow Packets/s",
+      "group": "Timing and rates",
+      "dtype": "number",
+      "allowsNegative": true,
+      "minimumObserved": -2000000.0,
+      "negativeRowsObserved": 107
+    },
+    {
+      "name": "Flow IAT Mean",
+      "group": "Timing and rates",
+      "dtype": "number",
+      "allowsNegative": true,
+      "minimumObserved": -13.0,
+      "negativeRowsObserved": 107
+    },
+    {
+      "name": "Flow IAT Std",
+      "group": "Timing and rates",
+      "dtype": "number",
+      "allowsNegative": false,
+      "minimumObserved": 0.0,
+      "negativeRowsObserved": 0
+    },
+    {
+      "name": "Flow IAT Max",
+      "group": "Timing and rates",
+      "dtype": "number",
+      "allowsNegative": true,
+      "minimumObserved": -13.0,
+      "negativeRowsObserved": 107
+    },
+    {
+      "name": "Flow IAT Min",
+      "group": "Timing and rates",
+      "dtype": "number",
+      "allowsNegative": true,
+      "minimumObserved": -14.0,
+      "negativeRowsObserved": 2880
+    },
+    {
+      "name": "Fwd IAT Total",
+      "group": "Timing and rates",
+      "dtype": "number",
+      "allowsNegative": false,
+      "minimumObserved": 0.0,
+      "negativeRowsObserved": 0
+    },
+    {
+      "name": "Fwd IAT Mean",
+      "group": "Timing and rates",
+      "dtype": "number",
+      "allowsNegative": false,
+      "minimumObserved": 0.0,
+      "negativeRowsObserved": 0
+    },
+    {
+      "name": "Fwd IAT Std",
+      "group": "Timing and rates",
+      "dtype": "number",
+      "allowsNegative": false,
+      "minimumObserved": 0.0,
+      "negativeRowsObserved": 0
+    },
+    {
+      "name": "Fwd IAT Max",
+      "group": "Timing and rates",
+      "dtype": "number",
+      "allowsNegative": false,
+      "minimumObserved": 0.0,
+      "negativeRowsObserved": 0
+    },
+    {
+      "name": "Fwd IAT Min",
+      "group": "Timing and rates",
+      "dtype": "number",
+      "allowsNegative": true,
+      "minimumObserved": -12.0,
+      "negativeRowsObserved": 17
+    },
+    {
+      "name": "Bwd IAT Total",
+      "group": "Timing and rates",
+      "dtype": "number",
+      "allowsNegative": false,
+      "minimumObserved": 0.0,
+      "negativeRowsObserved": 0
+    },
+    {
+      "name": "Bwd IAT Mean",
+      "group": "Timing and rates",
+      "dtype": "number",
+      "allowsNegative": false,
+      "minimumObserved": 0.0,
+      "negativeRowsObserved": 0
+    },
+    {
+      "name": "Bwd IAT Std",
+      "group": "Timing and rates",
+      "dtype": "number",
+      "allowsNegative": false,
+      "minimumObserved": 0.0,
+      "negativeRowsObserved": 0
+    },
+    {
+      "name": "Bwd IAT Max",
+      "group": "Timing and rates",
+      "dtype": "number",
+      "allowsNegative": false,
+      "minimumObserved": 0.0,
+      "negativeRowsObserved": 0
+    },
+    {
+      "name": "Bwd IAT Min",
+      "group": "Timing and rates",
+      "dtype": "number",
+      "allowsNegative": false,
+      "minimumObserved": 0.0,
+      "negativeRowsObserved": 0
+    },
+    {
+      "name": "Fwd PSH Flags",
+      "group": "TCP flags",
+      "dtype": "number",
+      "allowsNegative": false,
+      "minimumObserved": 0.0,
+      "negativeRowsObserved": 0
+    },
+    {
+      "name": "Bwd PSH Flags",
+      "group": "TCP flags",
+      "dtype": "number",
+      "allowsNegative": false,
+      "minimumObserved": 0.0,
+      "negativeRowsObserved": 0
+    },
+    {
+      "name": "Fwd URG Flags",
+      "group": "TCP flags",
+      "dtype": "number",
+      "allowsNegative": false,
+      "minimumObserved": 0.0,
+      "negativeRowsObserved": 0
+    },
+    {
+      "name": "Bwd URG Flags",
+      "group": "TCP flags",
+      "dtype": "number",
+      "allowsNegative": false,
+      "minimumObserved": 0.0,
+      "negativeRowsObserved": 0
+    },
+    {
+      "name": "Fwd Header Length",
+      "group": "Headers and windows",
+      "dtype": "number",
+      "allowsNegative": true,
+      "minimumObserved": -32212234632.0,
+      "negativeRowsObserved": 35
+    },
+    {
+      "name": "Bwd Header Length",
+      "group": "Headers and windows",
+      "dtype": "number",
+      "allowsNegative": true,
+      "minimumObserved": -1073741320.0,
+      "negativeRowsObserved": 22
+    },
+    {
+      "name": "Fwd Packets/s",
+      "group": "Timing and rates",
+      "dtype": "number",
+      "allowsNegative": false,
+      "minimumObserved": 0.0,
+      "negativeRowsObserved": 0
+    },
+    {
+      "name": "Bwd Packets/s",
+      "group": "Timing and rates",
+      "dtype": "number",
+      "allowsNegative": false,
+      "minimumObserved": 0.0,
+      "negativeRowsObserved": 0
+    },
+    {
+      "name": "Min Packet Length",
+      "group": "Packet counts and sizes",
+      "dtype": "number",
+      "allowsNegative": false,
+      "minimumObserved": 0.0,
+      "negativeRowsObserved": 0
+    },
+    {
+      "name": "Max Packet Length",
+      "group": "Packet counts and sizes",
+      "dtype": "number",
+      "allowsNegative": false,
+      "minimumObserved": 0.0,
+      "negativeRowsObserved": 0
+    },
+    {
+      "name": "Packet Length Mean",
+      "group": "Packet counts and sizes",
+      "dtype": "number",
+      "allowsNegative": false,
+      "minimumObserved": 0.0,
+      "negativeRowsObserved": 0
+    },
+    {
+      "name": "Packet Length Std",
+      "group": "Packet counts and sizes",
+      "dtype": "number",
+      "allowsNegative": false,
+      "minimumObserved": 0.0,
+      "negativeRowsObserved": 0
+    },
+    {
+      "name": "Packet Length Variance",
+      "group": "Packet counts and sizes",
+      "dtype": "number",
+      "allowsNegative": false,
+      "minimumObserved": 0.0,
+      "negativeRowsObserved": 0
+    },
+    {
+      "name": "FIN Flag Count",
+      "group": "TCP flags",
+      "dtype": "number",
+      "allowsNegative": false,
+      "minimumObserved": 0.0,
+      "negativeRowsObserved": 0
+    },
+    {
+      "name": "SYN Flag Count",
+      "group": "TCP flags",
+      "dtype": "number",
+      "allowsNegative": false,
+      "minimumObserved": 0.0,
+      "negativeRowsObserved": 0
+    },
+    {
+      "name": "RST Flag Count",
+      "group": "TCP flags",
+      "dtype": "number",
+      "allowsNegative": false,
+      "minimumObserved": 0.0,
+      "negativeRowsObserved": 0
+    },
+    {
+      "name": "PSH Flag Count",
+      "group": "TCP flags",
+      "dtype": "number",
+      "allowsNegative": false,
+      "minimumObserved": 0.0,
+      "negativeRowsObserved": 0
+    },
+    {
+      "name": "ACK Flag Count",
+      "group": "TCP flags",
+      "dtype": "number",
+      "allowsNegative": false,
+      "minimumObserved": 0.0,
+      "negativeRowsObserved": 0
+    },
+    {
+      "name": "URG Flag Count",
+      "group": "TCP flags",
+      "dtype": "number",
+      "allowsNegative": false,
+      "minimumObserved": 0.0,
+      "negativeRowsObserved": 0
+    },
+    {
+      "name": "CWE Flag Count",
+      "group": "TCP flags",
+      "dtype": "number",
+      "allowsNegative": false,
+      "minimumObserved": 0.0,
+      "negativeRowsObserved": 0
+    },
+    {
+      "name": "ECE Flag Count",
+      "group": "TCP flags",
+      "dtype": "number",
+      "allowsNegative": false,
+      "minimumObserved": 0.0,
+      "negativeRowsObserved": 0
+    },
+    {
+      "name": "Down/Up Ratio",
+      "group": "Timing and rates",
+      "dtype": "number",
+      "allowsNegative": false,
+      "minimumObserved": 0.0,
+      "negativeRowsObserved": 0
+    },
+    {
+      "name": "Average Packet Size",
+      "group": "Packet counts and sizes",
+      "dtype": "number",
+      "allowsNegative": false,
+      "minimumObserved": 0.0,
+      "negativeRowsObserved": 0
+    },
+    {
+      "name": "Avg Fwd Segment Size",
+      "group": "Packet counts and sizes",
+      "dtype": "number",
+      "allowsNegative": false,
+      "minimumObserved": 0.0,
+      "negativeRowsObserved": 0
+    },
+    {
+      "name": "Avg Bwd Segment Size",
+      "group": "Packet counts and sizes",
+      "dtype": "number",
+      "allowsNegative": false,
+      "minimumObserved": 0.0,
+      "negativeRowsObserved": 0
+    },
+    {
+      "name": "Fwd Avg Bytes/Bulk",
+      "group": "Bulk statistics",
+      "dtype": "number",
+      "allowsNegative": false,
+      "minimumObserved": 0.0,
+      "negativeRowsObserved": 0
+    },
+    {
+      "name": "Fwd Avg Packets/Bulk",
+      "group": "Bulk statistics",
+      "dtype": "number",
+      "allowsNegative": false,
+      "minimumObserved": 0.0,
+      "negativeRowsObserved": 0
+    },
+    {
+      "name": "Fwd Avg Bulk Rate",
+      "group": "Bulk statistics",
+      "dtype": "number",
+      "allowsNegative": false,
+      "minimumObserved": 0.0,
+      "negativeRowsObserved": 0
+    },
+    {
+      "name": "Bwd Avg Bytes/Bulk",
+      "group": "Bulk statistics",
+      "dtype": "number",
+      "allowsNegative": false,
+      "minimumObserved": 0.0,
+      "negativeRowsObserved": 0
+    },
+    {
+      "name": "Bwd Avg Packets/Bulk",
+      "group": "Bulk statistics",
+      "dtype": "number",
+      "allowsNegative": false,
+      "minimumObserved": 0.0,
+      "negativeRowsObserved": 0
+    },
+    {
+      "name": "Bwd Avg Bulk Rate",
+      "group": "Bulk statistics",
+      "dtype": "number",
+      "allowsNegative": false,
+      "minimumObserved": 0.0,
+      "negativeRowsObserved": 0
+    },
+    {
+      "name": "Subflow Fwd Packets",
+      "group": "Subflow metrics",
+      "dtype": "number",
+      "allowsNegative": false,
+      "minimumObserved": 1.0,
+      "negativeRowsObserved": 0
+    },
+    {
+      "name": "Subflow Fwd Bytes",
+      "group": "Subflow metrics",
+      "dtype": "number",
+      "allowsNegative": false,
+      "minimumObserved": 0.0,
+      "negativeRowsObserved": 0
+    },
+    {
+      "name": "Subflow Bwd Packets",
+      "group": "Subflow metrics",
+      "dtype": "number",
+      "allowsNegative": false,
+      "minimumObserved": 0.0,
+      "negativeRowsObserved": 0
+    },
+    {
+      "name": "Subflow Bwd Bytes",
+      "group": "Subflow metrics",
+      "dtype": "number",
+      "allowsNegative": false,
+      "minimumObserved": 0.0,
+      "negativeRowsObserved": 0
+    },
+    {
+      "name": "Init_Win_bytes_forward",
+      "group": "Headers and windows",
+      "dtype": "number",
+      "allowsNegative": true,
+      "minimumObserved": -1.0,
+      "negativeRowsObserved": 911012
+    },
+    {
+      "name": "Init_Win_bytes_backward",
+      "group": "Headers and windows",
+      "dtype": "number",
+      "allowsNegative": true,
+      "minimumObserved": -1.0,
+      "negativeRowsObserved": 1215625
+    },
+    {
+      "name": "act_data_pkt_fwd",
+      "group": "Packet counts and sizes",
+      "dtype": "number",
+      "allowsNegative": false,
+      "minimumObserved": 0.0,
+      "negativeRowsObserved": 0
+    },
+    {
+      "name": "min_seg_size_forward",
+      "group": "Headers and windows",
+      "dtype": "number",
+      "allowsNegative": true,
+      "minimumObserved": -536870661.0,
+      "negativeRowsObserved": 35
+    },
+    {
+      "name": "Active Mean",
+      "group": "Timing and rates",
+      "dtype": "number",
+      "allowsNegative": false,
+      "minimumObserved": 0.0,
+      "negativeRowsObserved": 0
+    },
+    {
+      "name": "Active Std",
+      "group": "Timing and rates",
+      "dtype": "number",
+      "allowsNegative": false,
+      "minimumObserved": 0.0,
+      "negativeRowsObserved": 0
+    },
+    {
+      "name": "Active Max",
+      "group": "Timing and rates",
+      "dtype": "number",
+      "allowsNegative": false,
+      "minimumObserved": 0.0,
+      "negativeRowsObserved": 0
+    },
+    {
+      "name": "Active Min",
+      "group": "Timing and rates",
+      "dtype": "number",
+      "allowsNegative": false,
+      "minimumObserved": 0.0,
+      "negativeRowsObserved": 0
+    },
+    {
+      "name": "Idle Mean",
+      "group": "Timing and rates",
+      "dtype": "number",
+      "allowsNegative": false,
+      "minimumObserved": 0.0,
+      "negativeRowsObserved": 0
+    },
+    {
+      "name": "Idle Std",
+      "group": "Timing and rates",
+      "dtype": "number",
+      "allowsNegative": false,
+      "minimumObserved": 0.0,
+      "negativeRowsObserved": 0
+    },
+    {
+      "name": "Idle Max",
+      "group": "Timing and rates",
+      "dtype": "number",
+      "allowsNegative": false,
+      "minimumObserved": 0.0,
+      "negativeRowsObserved": 0
+    },
+    {
+      "name": "Idle Min",
+      "group": "Timing and rates",
+      "dtype": "number",
+      "allowsNegative": false,
+      "minimumObserved": 0.0,
+      "negativeRowsObserved": 0
+    }
+  ]
+}
